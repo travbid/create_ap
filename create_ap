@@ -1258,7 +1258,7 @@ if [[ -n "$LOAD_CONFIG" && $# -eq 0 ]]; then
     for x in WIFI_IFACE INTERNET_IFACE SSID PASSPHRASE; do
         if eval "[[ -n \"\$${x}\" ]]"; then
             eval "set -- \"\${@:1:$i}\" \"\$${x}\""
-            ((i++))
+            ((i=i+1))
         fi
         # we unset the variable to avoid any problems later
         eval "unset $x"
